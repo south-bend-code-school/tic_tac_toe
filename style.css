@@ -32,16 +32,3 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
 }
-
-.playerSection {
-  display: inline-block;
-  margin: 0 1%;
-}
-
-#red {
-  color: red;
-}
-
-#blue {
-  color: blue;
-}
