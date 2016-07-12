@@ -2,8 +2,9 @@
   $(document).ready(init);
 
   var clickCount = 0;
-  var redScore = 0;
-  var blueScore = 0;
+  var redScore   = 0;
+  var blueScore  = 0;
+  var tieGame    = 0;
 
   function init(){
     $('.cell').on('click', placeTic);
@@ -32,6 +33,10 @@
   function checkForWin() {
     if ($('.taken').length === 9) {
       alert('Tie!');
+      tieGame++
+      $('#tieGame').empty();
+      $('#tieGame').append("<h1>"+tieGame+"</h1>");
+      clearBoard();
     // top row win red
     } else if (($('#top-left').hasClass('red') && $('#top-mid').hasClass('red') && $('#top-right').hasClass('red'))
     // middle row win red
