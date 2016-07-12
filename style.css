@@ -8,13 +8,14 @@ html, body {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 3em;
+  margin: 0;
 }
 
 #board {
-  height: 600px
+  height: 500px
   width: 60%;
-  margin: 5% 20%;
+  margin: 1% 20%;
 }
 
 .row {
@@ -30,4 +31,17 @@ h1 {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.playerSection {
+  display: inline-block;
+  margin: 0 1%;
+}
+
+#red {
+  color: red;
+}
+
+#blue {
+  color: blue;
 }
