@@ -17,21 +17,23 @@
         "background-image": "url("+'./ironman.png'+")",
         "background-color": "red"
       });
-      $(this).addClass('red');
+      $(this).addClass('red taken');
     } else {
       $(this).css({
         "background-image": "url("+'./cap.png'+")",
         "background-color": "blue"
       });
-      $(this).addClass('blue');
+      $(this).addClass('blue taken');
     }
 
     checkForWin();
   }
 
   function checkForWin() {
+    if ($('.taken').length === 9) {
+      alert('Tie!');
     // top row win red
-    if (($('#top-left').hasClass('red') && $('#top-mid').hasClass('red') && $('#top-right').hasClass('red'))
+    } else if (($('#top-left').hasClass('red') && $('#top-mid').hasClass('red') && $('#top-right').hasClass('red'))
     // middle row win red
       || ($('#mid-left').hasClass('red') && $('#mid-mid').hasClass('red') && $('#mid-right').hasClass('red'))
     // bottom row win red
@@ -74,6 +76,12 @@
       $('#blueScore').empty();
       $('#blueScore').append("<h1>"+blueScore+"</h1>");
       clearBoard();
+    }
+  }
+
+  function checkForTie() {
+    if ($('.taken').length === 9) {
+      alert('Tie!');
     }
   }
 
