@@ -32,3 +32,13 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.red {
+  background-image: url('./ironman.png');
+  background-color: red;
+}
+
+.blue {
+  background-image: url('./cap.png');
+  background-color: blue;
+}
