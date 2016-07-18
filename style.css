@@ -57,3 +57,13 @@ h1 {
 #blue {
   color: blue;
 }
+
+.red {
+  background-image: url('./ironman.png');
+  background-color: red;
+}
+
+.blue {
+  background-image: url('./cap.png');
+  background-color: blue;
+}

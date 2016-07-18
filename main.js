@@ -14,16 +14,8 @@
     clickCount++;
 
     if(clickCount % 2 === 0){
-      $(this).css({
-        "background-image": "url("+'./ironman.png'+")",
-        "background-color": "red"
-      });
       $(this).addClass('red taken');
     } else {
-      $(this).css({
-        "background-image": "url("+'./cap.png'+")",
-        "background-color": "blue"
-      });
       $(this).addClass('blue taken');
     }
 
@@ -84,19 +76,25 @@
     }
   }
 
-  function checkForTie() {
-    if ($('.taken').length === 9) {
-      alert('Tie!');
-    }
-  }
+  // function checkForTie() {
+  //   if ($('.taken').length === 9) {
+  //     alert('Tie!');
+  //   }
+  // }
 
   function clearBoard() {
     $('.cell').removeClass('red');
     $('.cell').removeClass('blue');
-    $('.cell').css({
+    $('.cell').removeClass('taken');
+    $('.red').css({
       "background-image":"none",
       "background-color":"transparent"
     });
+    $('.blue').css({
+      "background-image":"none",
+      "background-color":"transparent"
+    });
+    clickCount = 0;
   }
 
 })();
